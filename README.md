@@ -1,4 +1,6 @@
-![logo](scuba%20logo1.png)
+<div align="center">
+  <img src="scuba%20logo1.png" alt="SCUBA Lab Logo" width="150"/>
+</div>
 # Husky Waypoint Navigator 
 
 
