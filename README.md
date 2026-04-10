@@ -2,7 +2,7 @@
 
 This repository contains the autonomous waypoint navigation system for the SCUBA Lab's **Clearpath Husky A200** robot. It uses a **ZED X stereo camera** for positional tracking and a custom **PD (Proportional-Derivative) controller** to drive the robot precisely between a series of user-defined waypoints.
 
-> 🎥 **Demo Video**  
+>  **Demo Video**  
 > ![Husky Waypoint Navigation Demo](huskynav-ezgif.com-cut.gif)
 
 ---
@@ -39,7 +39,7 @@ Before you begin, make sure your computer meets these requirements:
 | **Internet** | Required during installation |
 | **Sudo Access** | You must be able to run `sudo` commands |
 
-> ⚠️ **On Windows or macOS?** You will need to install Ubuntu 22.04 as a dual-boot or virtual machine before continuing. The ZED SDK also requires a physical NVIDIA GPU — a VM will likely not work for that step.
+>  **On Windows or macOS?** You will need to install Ubuntu 22.04 as a dual-boot or virtual machine before continuing. The ZED SDK also requires a physical NVIDIA GPU — a VM will likely not work for that step.
 
 ---
 
@@ -75,7 +75,7 @@ sudo apt update
 sudo apt install ros-humble-desktop -y
 ```
 
-> ⏳ This may take 10–20 minutes depending on your internet speed.
+>  This may take 10–20 minutes depending on your internet speed.
 
 ### Step 2.5 — Auto-Load ROS 2 in Every Terminal
 
@@ -116,12 +116,12 @@ The ZED X camera requires Stereolabs' SDK to provide the robot with positional a
 ### Step 3.1 — Install NVIDIA Drivers
 The ZED X requires NVIDIA driver version 525 or newer. Follow NVIDIA's official
 installation guide for Ubuntu:
-👉 https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/
+ https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/
 
 ### Step 3.2 — Install the ZED SDK
 Download and install the ZED SDK for Ubuntu 22.04 from the Stereolabs developer page.
 Make sure to select the version that matches your CUDA version:
-👉 https://www.stereolabs.com/developers/release
+ https://www.stereolabs.com/developers/release
 
 ### Step 3.3 — Install the ZED ROS 2 Wrapper
 
@@ -223,7 +223,7 @@ colcon build --packages-select natnet_ros2
 source install/setup.bash
 ```
 
-> 💡 Skip this step if you are only using the ZED X camera.
+>  Skip this step if you are only using the ZED X camera.
 
 ---
 
@@ -235,7 +235,7 @@ colcon build --packages-select husky_nav_ros2
 source install/setup.bash
 ```
 
-> ✅ Run `source install/setup.bash` every time you rebuild. Your current terminal needs this even if `.bashrc` is already set up.
+>  Run `source install/setup.bash` every time you rebuild. Your current terminal needs this even if `.bashrc` is already set up.
 
 ---
 
@@ -267,8 +267,8 @@ Use the joystick to drive the Husky along the path you want it to follow:
 
 | Joystick Button | Action |
 |---|---|
-| **Button 0 (Cross / X)** | ▶️ Start recording the path |
-| **Button 2 (Square)** | ⏹️ Stop recording and save to `waypoints.csv` |
+| **Button 0 (Cross / X)** |  Start recording the path |
+| **Button 2 (Square)** |  Stop recording and save to `waypoints.csv` |
 
 Drive the robot along your desired route, then press **Square** when done. The recorder will process the path and save a clean, sparse set of waypoints to `waypoints.csv` in your working directory.
 
@@ -290,7 +290,7 @@ For example:
 
 Where `x` and `y` are position in meters and `theta` is the robot's target heading in radians.
 
-> ⚠️ The `waypoints.csv` file must be present in the directory where you run the navigator node, otherwise the robot will not move.
+>  The `waypoints.csv` file must be present in the directory where you run the navigator node, otherwise the robot will not move.
 
 ---
 
@@ -364,7 +364,7 @@ These are the exact ROS 2 topics the package uses. If your robot setup uses diff
 | `/navigation_status` | Published | `String` | Live status updates from the navigator |
 | `/a200_1046/joy_teleop/joy` | Subscribed | `Joy` | Joystick input for the waypoint recorder |
 
-> 💡 If your robot uses a different namespace than `a200_1046`, update the topic names at the top of `waypoint_navigator_pd.py` and `manual_waypoint_recorder.py`.
+>  If your robot uses a different namespace than `a200_1046`, update the topic names at the top of `waypoint_navigator_pd.py` and `manual_waypoint_recorder.py`.
 
 ---
 
