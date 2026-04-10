@@ -1,4 +1,4 @@
-# Husky Waypoint Navigator — SCUBA Lab
+# Husky Waypoint Navigator  ![description of image](filename.png)
 
 This repository contains the autonomous waypoint navigation system for the SCUBA Lab's **Clearpath Husky A200** robot. It uses a **ZED X stereo camera** for positional tracking and a custom **PD (Proportional-Derivative) controller** to drive the robot precisely between a series of user-defined waypoints.
 
