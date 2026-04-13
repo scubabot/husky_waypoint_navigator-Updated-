@@ -40,7 +40,7 @@ Before you begin, make sure your computer meets these requirements:
 | Requirement | Details |
 |---|---|
 | **Operating System** | Ubuntu 22.04 LTS — ROS 2 Humble does not run natively on Windows or macOS |
-| **ROS Version** | ROS 2 Humble Hawksbill |
+| **ROS Version** | ROS 2 Humble |
 | **Python** | Python 3.10 (included with Ubuntu 22.04) |
 | **GPU** | NVIDIA GPU required for the ZED X camera SDK |
 | **NVIDIA Driver** | Version 525 or newer |
